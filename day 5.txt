@@ -1,0 +1,199 @@
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int amount = s.nextInt();
+        int choice = s.nextInt();
+            switch(choice){
+                case 1:
+                    int deposit = s.nextInt();
+                    amount+=deposit;
+                    System.out.println(amount);
+                    break;
+                case 2:
+                    int withdraw = s.nextInt();
+                    if(amount < withdraw){
+                        System.out.println("Insufficient Balance");
+                    }else{
+                        amount-=withdraw;
+                        System.out.println(amount);
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid Input");
+                    
+            }
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+
+
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        char a = s.next().charAt(0);
+        if(a == 'a'|| a== 'e' || a == 'i' || a == 'o' || a == 'u' || a == 'A' || a == 'E' || a == 'I' || a == 'O' || a == 'U'){
+            System.out.println("The Character "+a+" is Vowel");
+        }
+        else{
+            System.out.println("The Character "+a+" is Consonant");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String name = s.next();
+        int sub1 = s.nextInt();
+        int sub2 = s.nextInt();
+        int sub3 = s.nextInt();
+        int sub4 = s.nextInt();
+        int sub5 = s.nextInt();
+        int totalmarks =(sub1+sub2+sub3+sub4+sub5);
+        double average = (double)(sub1+sub2+sub3+sub4+sub5)/5;
+        System.out.println("Name of the Student:"+name);
+        System.out.println("Total Mark:"+totalmarks);
+        System.out.printf("Average Mark:%.1f\n",average);
+        if(average==100){
+            System.out.println("Grade Mark:S");
+        }else if(average >= 90 ){
+            System.out.println("Grade Mark:A");
+        }else if (average >=80 && average<= 89){
+            System.out.println("Grade Mark:B");
+        }else if(average >=70 && average <= 79){
+            System.out.println("Grade Mark:C");
+        }else if (average >=60 && average <= 69){
+            System.out.println("Grade Mark:D");
+        }else if (average >=50 && average <= 59){
+            System.out.println("Grade Mark:E");
+        }else{
+            System.out.println("Grade Mark:Fail");
+        }
+    }
+}
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        if(n==1){
+            System.out.println("Monday");
+        }else if(n==2) {
+            System.out.println("Tuesday");
+        }else if (n==3){
+            System.out.println("Wednesday");
+        }else if (n==4){
+            System.out.println("Thursday");
+        }else if (n==5){
+            System.out.println("Friday");
+        }else if (n==6){
+            System.out.println("Saturday");
+        }else if (n==7){
+            System.out.println("Sunday");
+        }else{
+            System.out.println("Enter a valid Input");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String str = s.next();
+        char [] ch = str.toCharArray();
+        String rev = "";
+        for (int i = ch.length-1; i>=0;i--){
+            rev+=ch[i];
+        }
+        System.out.println(rev);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String str1 = s.next();
+        String str2 = s.next();
+        String con = str1+str2;
+        System.out.println(con);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String n = s.nextLine();
+        String r = n.replace(" ","");
+        System.out.println(r);
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        String r = str.replaceAll("[aeiou]","");
+        System.out.println(r);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String str = s.next();
+        int count=0;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+                count++;
+            }
+        }
+        System.out.println(count);
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
