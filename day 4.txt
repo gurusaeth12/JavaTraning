@@ -1,0 +1,181 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // number of passengers
+        if (n <= 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        int[] ages = new int[n];
+        for (int i = 0; i < n; i++) {
+            ages[i] = sc.nextInt();
+            if (ages[i] < 0) { // check invalid age
+                System.out.println("Invalid Input");
+                return;
+            }
+        }
+        int youngest = ages[0];
+        int oldest = ages[0];
+        for (int i = 1; i < n; i++) {
+            if (ages[i] < youngest) {
+                youngest = ages[i];
+            }
+            if (ages[i] > oldest) {
+                oldest = ages[i];
+            }
+        }
+        System.out.println("Youngest=" + youngest);
+        System.out.println("Oldest=" + oldest);
+    }
+}
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // number of buildings
+        int[] doors = new int[n];
+        for (int i = 0; i < n; i++) {
+            doors[i] = sc.nextInt();
+        }
+        int target = sc.nextInt(); // friend's home address
+        int index = -1;
+        for (int i = 0; i < n; i++) {
+            if (doors[i] == target) {
+                index = i;
+                break;
+            }
+        }
+        if (index == -1) {
+            System.out.println("-1");
+        } else {
+            System.out.printf("Door Number is %03d-DN%n", index);
+        }
+    }
+}
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int positive = 0, negative = 0;
+
+        for (int i = 0; i < n; i++) {
+            int val = sc.nextInt();
+            if (val > 0) {
+                positive++;
+            } else if (val < 0) {
+                negative++;
+            }
+        }
+
+        System.out.printf("Count of Positive Integer is %.2f%n", (double) positive);
+        System.out.printf("Count of Negative Integer is %.2f%n", (double) negative);
+    }
+}
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        int a = s.nextInt();
+        int b = s.nextInt();
+        float profit = (t*(a-b))-100;
+        System.out.println("Number of copies sold:"+t);
+        System.out.println("Cost of each copy:"+a);
+        System.out.println("Cost spent by agency on each newspaper:"+b);
+        System.out.printf("The profit obtained is Rs.%.2f",profit);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int x1 = s.nextInt();
+        int y1 = s.nextInt();
+        int x2 = s.nextInt();
+        int y2 = s.nextInt();
+        double mid1 = (double)(x1+x2)/2;
+        double mid2 = (double)(y1+y2)/2;
+        System.out.printf("Binoy's house is located at (%.1f,%.1f)",mid1,mid2);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int temp = a;
+        int rem = 0;
+        int sum = 0;
+        while(a!=0){
+            rem = a % 10;
+            sum += rem;
+            a /= 10;
+        }
+        System.out.println("Bird said:"+temp);
+        System.out.println("Alice must go in path-"+sum);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int base = s.nextInt();
+        int height = s.nextInt();
+        int a = s.nextInt();
+        int b = s.nextInt();
+        int c = s.nextInt();
+        double area = (double) (0.5*base*height);
+        double perimeter = (double) a+b+c;
+        System.out.printf("Area of Triangle is %.2f\n",area);
+        System.out.printf("Perimeter of Triangle is %.2f",perimeter);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int hrs = s.nextInt();
+        int min = s.nextInt();
+        int sec = s.nextInt();
+        min += sec/60;
+        sec =sec%60;
+        hrs += min/60;
+        min = min%60;
+        System.out.println("Total Number of hours is "+hrs);
+        System.out.println("Total Number of minutes is "+min);
+        System.out.println("Total Number of seconds is "+sec);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
